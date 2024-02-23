@@ -1,1 +1,1 @@
-# guess-the-word-2C-project NUB ECSE
+# guess-the-word-2C-project
