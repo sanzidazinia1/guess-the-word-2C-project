@@ -18,13 +18,14 @@ private:
     vector<string> midWords = {
         "boolean", "integer", "function", "variable", "compiler", "comment", "library", "package", "console",
         "program", "runtime", "keyword", "pointer", "iterator", "operator", "element", "unicode", "operand", "register",
-        "callback", "exception", "delegate", "string", "property", "resource", "adapter", "template", "database", "software",
-        "computer", "object", "method", "binary", "module", "syntax", "github"};
+        "callback", "delegate", "string", "property", "resource", "adapter", "template", "database", "software",
+        "computer", "object", "method", "binary", "module", "syntax", "github","Python"};
 
     vector<string> hardWords = {
         "programming", "algorithm", "language", "developer", "structure", "condition", "attribute", "assignment",
         "reference", "namespace", "inheritance", "encapsulation", "polymorphism", "abstraction", "framework",
-        "interface", "interpreter", "declaration", "initialization", "expression", "statement", "debugging", "testing"};
+        "interface", "interpreter", "declaration", "initialization", "expression", "statement", "debugging",
+         "testing","Complexity", "exception","Javascript"};
 
     vector<string> words;
     string secretWord;
@@ -52,17 +53,17 @@ public:
             break;
         case 2:
             words = midWords;
-            maxAttempts = 8;
+            maxAttempts = 7;
             hintLetters = 3;
             break;
         case 3:
             words = hardWords;
-            maxAttempts = 12;
+            maxAttempts = 8;
             hintLetters = 4;
             break;
         default:
             words = midWords; // Default to mid-level words
-            maxAttempts = 8;
+            maxAttempts = 7;
             hintLetters = 3;
             break;
         }
@@ -79,7 +80,7 @@ public:
     void playGame()
     {
         cout << endl
-             << "Welcome to Word Guessing Game!" << endl
+             << "Welcome to Guess The Word Game!" << endl
              << "This game features words based on programming." << endl
              << endl;
 
@@ -112,6 +113,8 @@ public:
             cout << endl
                  << "Sorry, you ran out of attempts. The word was: " << secretWord << endl;
             cout << "Your score: " << score << endl;
+
+            cout << "Don't know about this word! just go and Google now. --> www.google.com" << endl;
         }
     }
 
@@ -192,7 +195,7 @@ int main()
     WordGuessingGame game;
     int level;
 
-    cout << "Welcome to Word Guessing Game!" << endl;
+    cout << "Welcome to Guess The Word Game!" << endl;
     cout << "Choose difficulty level:" << endl;
     cout << "1. Easy" << endl;
     cout << "2. Mid" << endl;
